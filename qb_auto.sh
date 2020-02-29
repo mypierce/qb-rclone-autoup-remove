@@ -7,14 +7,14 @@ files_num=$5
 torrent_size=$6
 file_hash=$7
  
-qb_version="4.2.0"#如4.0.4、4.1.9.1、4.2.0等，不支持3.1.X
+qb_version="4.0.3"#如4.0.4、4.1.9.1、4.2.0等，不支持3.1.X
 qb_username="hostloc"#qb用户名
 qb_password="hostloc.com"#qb密码
-qb_web_url="https://hostloc.com"#QB web路径，可以填写本地http://localhost:8080
+qb_web_url="http://localhost:9092"#QB web路径，可以填写本地http://localhost:8080
 leeching_mode="true"#吸血模式 设为true 上传完后自动删除种子及数据 否则不删除，继续做种
 log_dir="/root/qbauto"#日志目录
-rclone_dest="gdrive"#rclone destination关键字 运行rclone config查看name字段即可
-rclone_parallel="32"#rclone上传线程 默认4
+rclone_dest="od"#rclone destination关键字 运行rclone config查看name字段即可
+rclone_parallel="4"#rclone上传线程 默认4
 auto_del_flag="rclone"#添加标签或者分类来标识已上传的种子 v4.0.4+版本添加标签“rclone”，低版本通过添加分类“rclone”标识
  
 if [ ! -d ${log_dir} ]
